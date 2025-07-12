@@ -1,1 +1,25 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: 'Inter', sans-serif;
+  --second-font: 'Press Start 2P', sans-serif;
+  --wght-main: 400;
+  --wght-title: 700;
+
+  --gradient:
+    repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  /* --image-width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem); */
+  --image-width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+  --stroke-color: #fff;
+  /* --image-height: font-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); */
+  
+  /* --bg-color: #000028;
+  --bc-image: url(../images/cover-image-dark.png);
+  --button-color: 255, 0, 112, 0.4;
+  --rec-display: block; */
+  --heart-contour: black;
+  --animation-fill-color: #FF0000;
+
+}
