@@ -13,17 +13,21 @@
 @keyframes enlarge-heart {
     from {
         transform: scale(1);
+        transform-origin: center;
     }
     to {
         transform: scale(1.25);
+        transform-origin: center;
     }
 }
 
 @keyframes moving-sparks {
     from {
         fill: transparent;
+        /* transform-origin: center; */
     }
     to {
         fill: var(--animation-fill-color);
+        /* transform-origin: center; */
     }
 }
