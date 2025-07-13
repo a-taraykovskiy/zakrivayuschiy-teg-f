@@ -3,7 +3,9 @@
   --main-font: 'Inter', sans-serif;
   --second-font: 'Press Start 2P', sans-serif;
   --wght-main: 400;
+  /* --wght-main-variaton: 410; */
   --wght-title: 700;
+  /* --wght-title-variaton: 715; */
 
   --gradient:
     repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),

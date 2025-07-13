@@ -22,6 +22,9 @@
   /* background-position: center;
   background-size: cover;
   background-repeat: no-repeat; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -86,12 +89,14 @@
   font-weight: var(--wght-title);
   font-size: 18px;
   color: #000;
-  min-height: 31px;
+  /* min-height: 31px; */
+  /* height: 100%; */
   padding-left: 10px;
   /* padding-top: 4px; */
   padding-top: 3px;
   padding-right: clamp(0.625rem, 0.3169rem + 1.3146vw, 1.5rem);
   padding-bottom: 3px;
+  font-variation-settings: 'wght' var(--wght-title);
 }
 
 .card__image {
@@ -100,10 +105,12 @@
   /* height: 100%; */
   /* max-height: 700px; */
   /* border: 2px solid #000; */
-  /* border-top: 2px solid #000;
-  border-bottom: 2px solid #000; */
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
   /* border-bottom: 2px solid #000; */
   display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 .card__description {
@@ -111,7 +118,8 @@
   /* border-right: 2px solid #000; */
   /* border-bottom: 2px solid #000; */
   /* padding: 25px; */
-  padding-top: 25px;
+  /* padding-top: 25px; */
+  padding-top: 28px;
   padding-left: 25px;
   padding-right: 25px;
   /* padding-bottom: 25px; */
@@ -176,6 +184,8 @@
   transition: 0.3s ease;
   /* height: 38px; */
   max-height: 38px;
+  display: flex;
+  align-items: center;
 }
 
 .label {
@@ -205,6 +215,8 @@
 @supports ((text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color))) {
   .label {
     -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
+    text-shadow: none;
   }
 }
 
@@ -240,7 +252,7 @@
 
 .dialog {
   width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  height: 191px;
+  /* height: 191px; */
   transition: opacity 0.3s ease-in-out;
   border: 2px solid #000;
   /* padding: 30px clamp(2.625rem, 2.8891rem + -1.1268vw, 1.875rem) 30px clamp(2.625rem, 2.8891rem + -1.1268vw, 1.875rem); */
@@ -258,17 +270,18 @@ dialog:open {
   display: grid;
   /* align-content: space-around; */
   align-content: space-between;
+  gap: 30px;
 }
 
 .dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
-  display: grid;
+  /* display: grid; */
 } 
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
+  /* backdrop-filter: blur(7px); */
 }
 
 .modal-button {
@@ -329,8 +342,8 @@ dialog:open {
 
 .button:focus {
   outline: none;
-  box-shadow: 2px 2px 0px rgba(251, 46, 217, 0.5);
-  /* accent-color: rgba(251, 46, 217, 0.5); */
+  box-shadow: 2px 2px 0px #000;
+  /* accent-color: #000; */
   transition: 0.3s ease;
 }
 
@@ -364,8 +377,8 @@ dialog:open {
 }
 
 .card__icon-button:focus-visible {
-  /* border: 2px solid rgba(251, 46, 217, 0.5); */
-  border-color: rgba(251, 46, 217, 0.5);
+  /* border: 2px solid #000; */
+  border-color: #000;
   transition: 0.3s ease;
   height: 38px;
   /* width: 38px; */
@@ -466,7 +479,8 @@ dialog:open {
   .cta-button {
     margin-bottom: 100px;
     flex-direction: column;
-    height: 84px;
+    /* height: 84px; */
+    height: 80px;
     padding-bottom: 10px;
   }
 
@@ -481,5 +495,13 @@ dialog:open {
   .dialog {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .card__description {
+    padding-top: 26px;
+  }
+
+  .card:last-of-type {
+    margin-bottom: 56px;
   }
 }
